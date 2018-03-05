@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import {greating} from '..';
+import {greetUser} from '..';
 
 console.log('Welcome to the Brain Games!');
-greating();
+greetUser();
