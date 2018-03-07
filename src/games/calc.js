@@ -1,6 +1,5 @@
 import readlineSync from 'readline-sync';
-import getRandomNum from './helpers/randomNumber';
-import calcGame from './games/calc';
+import getRandomNum from '../helpers/randomNumber';
 
 const GAME_COUNT = 3;
 
@@ -10,20 +9,31 @@ export const greetUser = () => {
   return userName;
 };
 
-export const evenGame = () => {
+export default () => {
   console.log('Welcome to the Brain Games!');
-  console.log('Answer "yes" if number even otherwise answer "no".\n');
+  console.log('What is the result of the expression?.\n');
   const userName = greetUser();
   const checkAnswer = (times = GAME_COUNT) => {
     if (!times) {
       console.log(`Congratulations, ${userName}!`);
       return;
     }
-    const randomNum = getRandomNum();
-    console.log(`Question: ${randomNum}`);
+    const randomNum1 = getRandomNum(0, 10);
+    const randomNum2 = getRandomNum(0, 10);
+    const sign = ['+', '-', '*'][getRandomNum(0, 2)];
+    console.log(`Question: ${randomNum1} ${sign} ${randomNum2}`);
     const answer = readlineSync.question('Your answer: ');
-    const correctAnswer = randomNum % 2 === 0 ? 'yes' : 'no';
-    if (correctAnswer !== answer) {
+    let correctAnswer = 0;
+    switch (sign) {
+      case '+': correctAnswer = randomNum1 + randomNum2;
+        break;
+      case '-': correctAnswer = randomNum1 - randomNum2;
+        break;
+      case '*': correctAnswer = randomNum1 * randomNum2;
+        break;
+      default: correctAnswer = 0;
+    }
+    if (+correctAnswer !== +answer) {
       console.log(`'${answer}' is wrong answer. \n Correct answer was '${correctAnswer}'. Let's try again, ${userName}!`);
     } else {
       console.log('Correct!');
@@ -32,5 +42,3 @@ export const evenGame = () => {
   };
   checkAnswer();
 };
-
-export { calcGame };
