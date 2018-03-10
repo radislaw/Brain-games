@@ -3,7 +3,7 @@ import makeGame from '..';
 import getRandomNum from '../helpers/randomNumber';
 
 export default () => {
-  const mission = 'Find the greatest common divisor of given numbers.\n';
+  const mission = 'Find the greatest common divisor of given numbers.';
   const getQuestionAndAnswer = () => {
     const randomNum1 = getRandomNum(0, 20);
     const randomNum2 = getRandomNum(0, 20);

@@ -3,7 +3,7 @@ import makeGame from '..';
 import getRandomNum from '../helpers/randomNumber';
 
 export default () => {
-  const mission = 'What is the result of the expression?.\n';
+  const mission = 'What is the result of the expression?.';
   const getQuestionAndAnswer = () => {
     const randomNum1 = getRandomNum(0, 20);
     const randomNum2 = getRandomNum(0, 20);

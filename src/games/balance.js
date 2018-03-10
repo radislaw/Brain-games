@@ -3,7 +3,7 @@ import makeGame from '..';
 import getRandomNum from '../helpers/randomNumber';
 
 export default () => {
-  const mission = 'Balance the given number.\n';
+  const mission = 'Balance the given number.';
   const getQuestionAndAnswer = () => {
     const randomNum = getRandomNum(1, 9999);
     const findUnbalancedNum = (num) => {

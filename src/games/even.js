@@ -3,7 +3,7 @@ import makeGame from '..';
 import getRandomNum from '../helpers/randomNumber';
 
 export default () => {
-  const mission = 'Answer "yes" if number even otherwise answer "no".\n';
+  const mission = 'Answer "yes" if number even otherwise answer "no".';
   const getQuestionAndAnswer = () => {
     const randomNum = getRandomNum();
     const question = randomNum;
