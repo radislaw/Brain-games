@@ -1,5 +1,5 @@
 import { cons } from 'hexlet-pairs';
-import makeGame from '../makeGame';
+import makeGame from '..';
 import getRandomNum from '../helpers/randomNumber';
 
 export default () => {
