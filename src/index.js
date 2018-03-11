@@ -11,13 +11,13 @@ const errorColor = '#FF1744';
 
 export const greetUser = () => {
   const userName = readlineSync.question(chalk.hex(questionColor).bold('May I have your name? '));
-  console.log(chalk.hex(greetingColor).bold(`Hello ${userName}!`));
+  console.log(chalk.hex(greetingColor).bold(`Hello ${userName}!\n`));
   return userName;
 };
 
 export default (mission, getQuestionAndAnswer) => {
   console.log(chalk.hex(greetingColor).bold('Welcome to the Brain Games!'));
-  console.log(chalk.hex(missionColor).bold(mission));
+  console.log(chalk.hex(missionColor).bold(`${mission}\n`));
   const userName = greetUser();
   const checkAnswer = (times = GAME_COUNT) => {
     if (!times) {
