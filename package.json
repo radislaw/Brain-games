@@ -26,6 +26,7 @@
   "author": "Radislaw Yalilow",
   "license": "ISC",
   "dependencies": {
+    "chalk": "^2.3.2",
     "hexlet-pairs": "^1.0.5",
     "readline-sync": "^1.4.9"
   },
