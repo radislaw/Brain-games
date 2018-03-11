@@ -8,13 +8,13 @@ export default () => {
     const randomNum1 = getRandomNum(0, 20);
     const randomNum2 = getRandomNum(0, 20);
     const question = `${randomNum1} ${randomNum2}`;
-    const correctAnswer = (n1, n2) => {
+    const gcd = (n1, n2) => {
       if (n2 > 0) {
-        return correctAnswer(n2, n1 % n2);
+        return gcd(n2, n1 % n2);
       }
       return n1;
     };
-    return cons(question, correctAnswer(randomNum1, randomNum2));
+    return cons(question, gcd(randomNum1, randomNum2));
   };
   makeGame(mission, getQuestionAndAnswer);
 };
