@@ -11,9 +11,9 @@ export default () => {
     for (let i = 1; i < 10; i += 1) {
       numArr.push(firstNumber += interval);
     }
-    const missigNumIndex = getRandomNum(2, 10);
-    const correctAnswer = numArr[missigNumIndex];
-    numArr[missigNumIndex] = '..';
+    const missingNumIndex = getRandomNum(1, 9);
+    const correctAnswer = numArr[missingNumIndex];
+    numArr[missingNumIndex] = '..';
     const question = numArr.join(' ');
     return cons(question, correctAnswer);
   };
