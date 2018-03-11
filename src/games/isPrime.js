@@ -13,10 +13,10 @@ export default () => {
       }
       for (let i = 2; i <= n / 2; i += 1) {
         if (n % i === 0) {
-          return true;
+          return false;
         }
       }
-      return false;
+      return true;
     };
     return cons(question, correctAnswer(randomNum));
   };
