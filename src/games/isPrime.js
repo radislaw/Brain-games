@@ -11,12 +11,16 @@ export default () => {
       if (n < 2) {
         return false;
       }
-      for (let i = 2; i <= n / 2; i += 1) {
-        if (n % i === 0) {
+      const iter = (counter, acc) => {
+        if (acc > Math.sqrt(counter)) {
+          return true;
+        }
+        if (counter % acc === 0) {
           return false;
         }
-      }
-      return true;
+        return iter(counter, acc + 1);
+      };
+      return iter(n, 2);
     };
     const correctAnswer = isPrime(randomNum) ? 'yes' : 'no';
     return cons(question, correctAnswer);
