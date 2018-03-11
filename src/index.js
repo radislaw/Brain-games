@@ -32,7 +32,7 @@ export default (mission, getQuestionAndAnswer) => {
       console.log(chalk.hex(errorColor)
         .bold(`'${answer}' is wrong answer. \nCorrect answer was '${correctAnswer}'. Let's try again, ${userName}!`));
     } else {
-      console.log(chalk.hex(successColor).bold('Correct!'));
+      console.log(chalk.hex(successColor).bold('Correct!\n'));
       checkAnswer(times - 1);
     }
   };
