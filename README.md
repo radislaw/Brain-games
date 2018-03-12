@@ -63,4 +63,4 @@ brain-prime
 
 
 ## Demo
-[![asciicast](https://asciinema.org/a/icY1En7E6gb1UmFor9tXT5Dwp.png)](https://asciinema.org/a/icY1En7E6gb1UmFor9tXT5Dwp)
+[![asciicast](https://asciinema.org/a/yaMbDDJM99piOC3B2O8e6avst.png)](https://asciinema.org/a/yaMbDDJM99piOC3B2O8e6avst)
