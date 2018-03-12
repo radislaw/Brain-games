@@ -21,8 +21,8 @@ npm i -g ya-brain-games
 ```
 
 ## Play
-In terminal you have to simply type name of one of given game:
- **brain-games**
+In terminal you have to simply type name of one of given game. For example:
+ **brain-even**
 
 ## Game's rules
 Every game has 3 rounds. If you give right answer on any offered question it lets you go to the next round otherwise game over, which reports message with correct answer.
