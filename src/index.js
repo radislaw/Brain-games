@@ -28,7 +28,7 @@ export const selectGame = () => {
   const games = [even, calc, gcd, balance, progression, prime];
   const gamesNames = ['brain-even', 'brain-calc', 'brain-gcd', 'brain-balance', 'brain-progression', 'brain-prime'];
   const index = readlineSync.keyInSelect(gamesNames, chalk.hex(questionColor).bold('Select game'));
-  return games[index];
+  return games[index]();
 };
 
 export default (mission, getQuestionAndAnswer) => {
