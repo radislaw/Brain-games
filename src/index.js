@@ -18,10 +18,7 @@ const successColor = '#00E676';
 const errorColor = '#FF1744';
 
 export const greetUser = () => {
-  console.log(chalk.hex(greetingColor).bold('Welcome to the Brain Games!\n'));
-  const userName = readlineSync.question(chalk.hex(questionColor).bold('May I have your name? '));
-  console.log(chalk.hex(greetingColor).bold(`Hello ${userName}!`));
-  return userName;
+  console.log(chalk.hex(greetingColor).bold('Welcome to the Brain Games!'));
 };
 
 export const selectGame = () => {
@@ -32,7 +29,8 @@ export const selectGame = () => {
 };
 
 export default (mission, getQuestionAndAnswer) => {
-  const userName = greetUser();
+  const userName = readlineSync.question(chalk.hex(questionColor).bold('\nMay I have your name? '));
+  console.log(chalk.hex(greetingColor).bold(`Hello ${userName}!`));
   console.log(chalk.hex(missionColor).bold(`${mission}\n`));
   const checkAnswer = (times = GAME_COUNT) => {
     if (!times) {
