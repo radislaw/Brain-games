@@ -32,6 +32,7 @@ export const selectGame = () => {
 };
 
 export default (mission, getQuestionAndAnswer) => {
+  const userName = greetUser();
   console.log(chalk.hex(missionColor).bold(`${mission}\n`));
   const checkAnswer = (times = GAME_COUNT) => {
     if (!times) {
