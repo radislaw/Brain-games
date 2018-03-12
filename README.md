@@ -5,7 +5,7 @@
 
 ## Description
 
-This is CLI math mini games. Set consist of  6 games:
+This is CLI mini math games. Set consist of  6 games:
 
 1. brain-even
 2. brain-calc
@@ -21,7 +21,7 @@ npm i -g ya-brain-games
 ```
 
 ## Play
-In terminal you have to simply type name of one of given game. For example:
+In terminal you have to type **brain-games** or name of one of given game. For example:
  **brain-even**
 
 ## Game's rules
